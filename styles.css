@@ -11,16 +11,10 @@
     clear: none;
 }
 
-#date {
-    color: gray;
-    float: right;
-}
-
 .card {
     padding: 10px;
     width: 75%;
     margin: auto;
-    padding: 10px;
 }
 
 .myTab {

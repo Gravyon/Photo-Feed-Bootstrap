@@ -21,9 +21,59 @@
         <div class="container-fluid">
             <i class="fa-brands fa-instagram"></i>
             <a class="navbar-brand position-absolute">Instagram</a>
-            <form class="d-flex" role="search">
-                <button type="button" class="btn btn-success">Create new post</button>
-                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            <form class="d-flex gap-3" role="search">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Create a new post
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="input-group">
+                                    <textarea class="form-control" placeholder="Add the caption of your post here" aria-label="With textarea"></textarea>
+                                </div>
+                            </div>
+                            <!-- Falta remover la camara del border -->
+                            <div class="d-flex gap-3 justify-content-start">
+                                <i class="fa-solid fa-camera  rounded-2 d-flex justify-content-start"></i>
+                                <i class="fa-solid fa-location-dot  rounded-2 d-flex justify-content-start"></i>                               
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Modal body text goes here.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <i class="fa-solid fa-gear"></i>
                 </button>
@@ -32,8 +82,26 @@
                     <li>asdas</li>
                     <li>asdasd</li>
                     <li>Logout</li>
-                  </ul>
-            </form>              
+                </ul> -->
+                <!-- Settings button -->
+                <!-- Necesita dropstart por que si no aparece fuera de la pantalla -->
+                <div class="btn-group dropstart"> 
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                    </ul>
+                </div>
+
+            </form>
         </div>
     </nav>
     <!-- Cambiar vista -->
@@ -56,10 +124,14 @@
             <div class="card" style="width: 45rem;">
                 <div id="divtext">
                     <h5 id="h5">Crazy dog</h5>
-                    <p id="date">08/26</p>
+                    <!-- Fecha no se mueve a la derecha por alguna razon -->
+                    <div>
+                        <p class="d-flex justify-content-end">08/26</p>
+                    </div>
+                    
                 </div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA" class="card-img-top"
-                    alt="...">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA"
+                    class="card-img-top" alt="...">
                 <div class="card-body">
                     <p>Perro loco</p>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -69,8 +141,8 @@
                     <h5 id="h5">Crazy dog</h5>
                     <p id="date">08/26</p>
                 </div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA" class="card-img-top"
-                    alt="...">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA"
+                    class="card-img-top" alt="...">
                 <div class="card-body">
                     <p>Perro loco</p>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -80,8 +152,8 @@
                     <h5 id="h5">Crazy dog</h5>
                     <p id="date">08/26</p>
                 </div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA" class="card-img-top"
-                    alt="...">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA"
+                    class="card-img-top" alt="...">
                 <div class="card-body">
                     <p>Perro loco</p>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -93,35 +165,47 @@
             <!-- Picture grid -->
             <div class="container text-center d-flex justify-content-center">
                 <div class="row">
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-4">
                         <img class="img -thumbnail"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA">
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-4">
                         <img class="img -thumbnail"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA">
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-4">
                         <img class="img -thumbnail"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA">
                     </div>
-                    <div class="col-12 col-lg-3">
+                </div>
+            </div>
+            <div class="container text-center d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
                         <img class="img -thumbnail"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA">
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-4">
                         <img class="img -thumbnail"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA">
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-4">
                         <img class="img -thumbnail"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA">
                     </div>
-                    <div class="col-12 col-lg-3">
+                </div>
+            </div>
+            <div class="container text-center d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
                         <img class="img -thumbnail"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA">
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-4">
+                        <img class="img -thumbnail"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA">
+                    </div>
+                    <div class="col-12 col-lg-4">
                         <img class="img -thumbnail"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn6L9FhLRV-tTP_Y9RrloLKI2FeimS_8hHA">
                     </div>
